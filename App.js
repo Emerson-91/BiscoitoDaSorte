@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { StatusBar } from 'react-native';
 import { ImageBackground } from 'react-native';
 import { Image, TouchableOpacity } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
@@ -61,6 +62,7 @@ export default class BiscoitoDaSorte extends Component {
   render() {
     return (
       <ImageBackground source={require('./images/bg.jpg')} style={styles.container}>
+        <StatusBar style="auto" />
         <Image source={require('./images/cookie.png')} />
         <Text style={styles.texto}> " {this.state.texto} " </Text>
         <Botao color="#B59619" text="Quebrar biscoito" aoClicar={this.quebrarBiscoito} />
